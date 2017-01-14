@@ -166,7 +166,7 @@
         <item>None</item>
         <item>Single touch</item>
         <item>Double tap</item>
-        </string-array>
+    </string-array>
     <string-array name="preference_touch_capture_values">
         <item>none</item>
         <item>single</item>
@@ -193,7 +193,7 @@
     <string-array name="preference_rotate_preview_entries">
         <item>Don\'t rotate</item>
         <item>Rotate 180 degrees</item>
-        </string-array>
+    </string-array>
     <string-array name="preference_rotate_preview_values">
         <item>0</item>
         <item>180</item>
@@ -217,7 +217,7 @@
         <item>immersive_mode_low_profile</item>
         <item>immersive_mode_gui</item>
         <item>immersive_mode_everything</item>
-        </string-array>
+    </string-array>
     <string-array name="preference_angle_highlight_color_entries">
         <item>Red</item>
         <item>Green</item>
@@ -649,4 +649,98 @@
         <item>2700</item>
         <item>3600</item>
     </string-array>
+
+    <!-- BBMSpace arrays-->
+    <string-array name="bbmspace_time_to_turn_off_screen_entries">
+        <item>Disable</item>
+        <item>1s</item>
+        <item>2s</item>
+        <item>3s</item>
+        <item>5s</item>
+        <item>10s</item>
+        <item>15s</item>
+        <item>20s</item>
+        <item>30s</item>
+        <item>1m</item>
+        <item>2m</item>
+        <item>5m</item>
+        <item>10m</item>
+        <item>20m</item>
+        <item>30m</item>
+        <item>1h</item>
+        <item>2h</item>
+    </string-array>
+    <string-array name="bbmspace_time_to_turn_off_screen_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>30</item>
+        <item>60</item>
+        <item>120</item>
+        <item>300</item>
+        <item>600</item>
+        <item>1200</item>
+        <item>1800</item>
+        <item>3600</item>
+        <item>7200</item>
+    </string-array>
+
+    <string-array name="bbmspace_time_to_slow_brust_interval_entries">
+        <item>Disable</item>
+        <item>1m</item>
+        <item>2m</item>
+        <item>5m</item>
+        <item>10m</item>
+        <item>20m</item>
+        <item>30m</item>
+        <item>1h</item>
+        <item>2h</item>
+    </string-array>
+    <string-array name="bbmspace_time_to_slow_brust_interval_values">
+        <item>60</item>
+        <item>120</item>
+        <item>300</item>
+        <item>600</item>
+        <item>1200</item>
+        <item>1800</item>
+        <item>3600</item>
+        <item>7200</item>
+    </string-array>
+
+    <string-array name="bbmspace_divider_to_slow_brust_interval_entries">
+        <item>DIV 2</item>
+        <item>DIV 4</item>
+        <item>DIV 8</item>
+        <item>DIV 16</item>
+    </string-array>
+    <string-array name="bbmspace_divider_to_slow_brust_interval_values">
+        <item>2</item>
+        <item>4</item>
+        <item>8</item>
+        <item>16</item>
+    </string-array>
+
+    <string-array name="bbmspace_end_trip_timer_entries">
+        <item>Disable</item>
+        <item>10m</item>
+        <item>20m</item>
+        <item>30m</item>
+        <item>1h</item>
+        <item>2h</item>
+        <item>4h</item>
+    </string-array>
+    <string-array name="bbmspace_tend_trip_timer_values">
+        <item>600</item>
+        <item>1200</item>
+        <item>1800</item>
+        <item>3600</item>
+        <item>7200</item>
+        <item>14400</item>
+    </string-array>
+
 </resources>

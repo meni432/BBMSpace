@@ -159,4 +159,11 @@ public interface ApplicationInterface {
 	void onCaptureStarted(); // called immediately before we start capturing the picture
 	void onPictureCompleted(); // called after all picture callbacks have been called and returned
 	void onContinuousFocusMove(boolean start); // called when focusing starts/stop in continuous picture mode (in photo mode only)
+
+	// BBM Space
+    boolean bbmSpaceModeIsOn();
+    long bbmSpaceTurnOffScreenTimerPref();
+    long bbmSpaceSlowBrustIntervalTimerPref();
+    int bbmSpaceBrustDividerIntervalTimerPref();
+    long bbmSpaceEndTripIntervalTimerPref();
 }

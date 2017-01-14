@@ -409,4 +409,7 @@
     <string name="capturing">Capturing…</string>
 
     <string name="audio_listener_failed">Failed to initalise audio listening</string>
+    <string name="bbm_space_setting">BBMSpace Setting</string>
+    <string name="turn_off_screen_timer">Turn Off screen timer</string>
+    <string name="screen_timer">Screen Timer</string>
 </resources>

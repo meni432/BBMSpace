@@ -1,5 +1,6 @@
 package net.sourceforge.opencamera.Preview;
 
+import net.sourceforge.opencamera.BBMSpace.BurstManager;
 import net.sourceforge.opencamera.MyDebug;
 import net.sourceforge.opencamera.R;
 import net.sourceforge.opencamera.TakePhoto;
@@ -259,6 +260,8 @@ public class Preview implements SurfaceHolder.Callback, TextureView.SurfaceTextu
 	public volatile int count_cameraContinuousFocusMoving;
 	public volatile boolean test_fail_open_camera;
 	public volatile boolean test_video_failure;
+
+	public final BurstManager burstManager = BurstManager.getInstance();
 
 	public Preview(ApplicationInterface applicationInterface, ViewGroup parent) {
 		if( MyDebug.LOG ) {

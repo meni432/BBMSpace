@@ -414,4 +414,16 @@ public class PreferenceKeys {
     public static String getImmersiveModePreferenceKey() {
     	return "preference_immersive_mode";
     }
+
+    /**
+     * BBMSpace Keys
+     */
+
+    public static String getBBMSpaceModePreferenceKey() { return "bbm_space_mode"; }
+    public static String getBBMSpceTurnOffScreenTimerValuePreferenceKey() { return "bbmspace_turn_of_screen_timer"; }
+    public static String getBBMSpaceSlowBrustTimerValuePreferenceKey() { return "bbmspace_slow_brust_interval_timer"; }
+    public static String getBBMSpaceBrustDividorPreferenceKey() { return "bbmspace_divider_brust_interval_timer"; }
+    public static String getBBMSpaceEndTripTimerValuePreferenceKey() { return "bbmspace_end_trip_timer"; }
+
+
 }

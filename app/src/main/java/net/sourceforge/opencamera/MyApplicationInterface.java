@@ -906,7 +906,7 @@ public class MyApplicationInterface implements ApplicationInterface {
 		drawPreview.onContinuousFocusMove(start);
 	}
 
-	@Override
+    @Override
 	public void touchEvent(MotionEvent event) {
 		main_activity.getMainUI().clearSeekBar();
 		main_activity.getMainUI().closePopup();
@@ -1982,4 +1982,89 @@ public class MyApplicationInterface implements ApplicationInterface {
 	
 	public boolean test_set_available_memory = false;
 	public long test_available_memory = 0;
+
+	// BBM Space
+    @Override
+    public boolean bbmSpaceModeIsOn() {
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getContext());
+        return sharedPreferences.getBoolean(PreferenceKeys.getBBMSpaceModePreferenceKey(), false);
+    }
+
+//    			timer_delay = (long)Integer.parseInt(timer_value) * 1000;
+
+    @Override
+    public long bbmSpaceTurnOffScreenTimerPref() {
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getContext());
+        String value = sharedPreferences.getString(PreferenceKeys.getBBMSpceTurnOffScreenTimerValuePreferenceKey(), "0");
+        if( MyDebug.LOG )
+            Log.d(TAG, "screenTimer value: " + value);
+        long screenTimer = 0;
+        try {
+            screenTimer = (long)Integer.parseInt(value) * 1000;
+            if( MyDebug.LOG )
+                Log.d(TAG, "screenTimer: " + screenTimer);
+        }
+        catch(NumberFormatException exception) {
+            if( MyDebug.LOG )
+                Log.d(TAG, "screenTimer invalid format, can't parse to int");
+        }
+        return screenTimer;
+    }
+
+    @Override
+    public long bbmSpaceSlowBrustIntervalTimerPref() {
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getContext());
+        String value = sharedPreferences.getString(PreferenceKeys.getBBMSpaceSlowBrustTimerValuePreferenceKey(), "0");
+        if( MyDebug.LOG )
+            Log.d(TAG, "saved turn of screen timer value: " + value);
+        long slowBrustTimer = 0;
+        try {
+            slowBrustTimer = (long)Integer.parseInt(value) * 1000;
+            if( MyDebug.LOG )
+                Log.d(TAG, "slowBrustTimer: " + slowBrustTimer);
+        }
+        catch(NumberFormatException exception) {
+            if( MyDebug.LOG )
+                Log.d(TAG, "slowBrustTimer invalid format, can't parse to int");
+        }
+        return slowBrustTimer;
+    }
+
+    @Override
+    public int bbmSpaceBrustDividerIntervalTimerPref() {
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getContext());
+        String value = sharedPreferences.getString(PreferenceKeys.getBBMSpaceBrustDividorPreferenceKey(), "0");
+        if( MyDebug.LOG )
+            Log.d(TAG, "slowBrustDividerTimer value: " + value);
+        int slowBrustDividerTimer = 0;
+        try {
+            slowBrustDividerTimer = Integer.parseInt(value);
+            if( MyDebug.LOG )
+                Log.d(TAG, "slowBrustDividerTimer: " + slowBrustDividerTimer);
+        }
+        catch(NumberFormatException exception) {
+            if( MyDebug.LOG )
+                Log.d(TAG, "slowBrustDividerTimer invalid format, can't parse to int");
+        }
+        return slowBrustDividerTimer;
+    }
+
+    @Override
+    public long bbmSpaceEndTripIntervalTimerPref() {
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getContext());
+        String value = sharedPreferences.getString(PreferenceKeys.getBBMSpaceEndTripTimerValuePreferenceKey(), "0");
+        if( MyDebug.LOG )
+            Log.d(TAG, "endTripTimer value: " + value);
+        long endTripTimer = 0;
+        try {
+            endTripTimer = (long)Integer.parseInt(value) * 1000;
+            if( MyDebug.LOG )
+                Log.d(TAG, "endTripTimer: " + endTripTimer);
+        }
+        catch(NumberFormatException exception) {
+            if( MyDebug.LOG )
+                Log.d(TAG, "endTripTimer invalid format, can't parse to int");
+        }
+        return endTripTimer;
+    }
 }
