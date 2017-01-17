@@ -453,6 +453,23 @@
                 android:summary="Timer until trip end and then stop capture picture"
                 android:title="End Trip Timer" />
 
+
+            <ListPreference
+                android:entries="@array/bbmspace_sms_interval_entries"
+                android:entryValues="@array/bbmspace_sms_interval_values"
+                android:key="bbmspace_sms_interval"
+                android:summary="sender sms interval timer"
+                android:title="SMS Timer" />
+
+            <EditTextPreference
+                android:defaultValue=""
+                android:dialogMessage="for example: +972546450344"
+                android:dialogTitle="base phone number"
+                android:inputType="text"
+                android:key="base_sms_number"
+                android:summary="Base sms number"
+                android:title="SMS Number" />
+
         </PreferenceScreen>
 
 

@@ -424,6 +424,8 @@ public class PreferenceKeys {
     public static String getBBMSpaceSlowBrustTimerValuePreferenceKey() { return "bbmspace_slow_brust_interval_timer"; }
     public static String getBBMSpaceBrustDividorPreferenceKey() { return "bbmspace_divider_brust_interval_timer"; }
     public static String getBBMSpaceEndTripTimerValuePreferenceKey() { return "bbmspace_end_trip_timer"; }
+    public static String getBBMSpaceSMSIntervalPerferenceKey() {return "bbmspace_sms_interval"; }
+    public static String getBBMSpaceBaseSMSNumberPerferenceKey() {return "base_sms_number";}
 
 
 }

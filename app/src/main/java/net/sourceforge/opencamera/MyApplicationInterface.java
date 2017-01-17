@@ -1987,7 +1987,7 @@ public class MyApplicationInterface implements ApplicationInterface {
     @Override
     public boolean bbmSpaceModeIsOn() {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getContext());
-        return sharedPreferences.getBoolean(PreferenceKeys.getBBMSpaceModePreferenceKey(), false);
+        return sharedPreferences.getBoolean(PreferenceKeys.getBBMSpaceModePreferenceKey(), true);
     }
 
 //    			timer_delay = (long)Integer.parseInt(timer_value) * 1000;
@@ -2012,11 +2012,11 @@ public class MyApplicationInterface implements ApplicationInterface {
     }
 
     @Override
-    public long bbmSpaceSlowBrustIntervalTimerPref() {
+    public long bbmSpaceSlowBurstIntervalTimerPref() {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getContext());
         String value = sharedPreferences.getString(PreferenceKeys.getBBMSpaceSlowBrustTimerValuePreferenceKey(), "0");
         if( MyDebug.LOG )
-            Log.d(TAG, "saved turn of screen timer value: " + value);
+            Log.d(TAG, "slow burst divider value: " + value);
         long slowBrustTimer = 0;
         try {
             slowBrustTimer = (long)Integer.parseInt(value) * 1000;
@@ -2031,7 +2031,7 @@ public class MyApplicationInterface implements ApplicationInterface {
     }
 
     @Override
-    public int bbmSpaceBrustDividerIntervalTimerPref() {
+    public int bbmSpaceBurstDividerIntervalTimerPref() {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getContext());
         String value = sharedPreferences.getString(PreferenceKeys.getBBMSpaceBrustDividorPreferenceKey(), "0");
         if( MyDebug.LOG )
@@ -2067,4 +2067,30 @@ public class MyApplicationInterface implements ApplicationInterface {
         }
         return endTripTimer;
     }
+
+	@Override
+	public long bbmSpaceSMSIntervalTimerPref() {
+		SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getContext());
+		String value = sharedPreferences.getString(PreferenceKeys.getBBMSpaceSMSIntervalPerferenceKey(), "0");
+		if( MyDebug.LOG )
+			Log.d(TAG, "endTripTimer value: " + value);
+		long endTripTimer = 0;
+		try {
+			endTripTimer = (long)Integer.parseInt(value) * 1000;
+			if( MyDebug.LOG )
+				Log.d(TAG, "endTripTimer: " + endTripTimer);
+		}
+		catch(NumberFormatException exception) {
+			if( MyDebug.LOG )
+				Log.d(TAG, "endTripTimer invalid format, can't parse to int");
+		}
+		return endTripTimer;
+	}
+
+	@Override
+	public String bbmSpaceSMSPhoneNumber() {
+		SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getContext());
+		String value = sharedPreferences.getString(PreferenceKeys.getBBMSpaceBaseSMSNumberPerferenceKey(), "0");
+		return value;
+	}
 }

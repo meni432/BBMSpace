@@ -163,7 +163,9 @@ public interface ApplicationInterface {
 	// BBM Space
     boolean bbmSpaceModeIsOn();
     long bbmSpaceTurnOffScreenTimerPref();
-    long bbmSpaceSlowBrustIntervalTimerPref();
-    int bbmSpaceBrustDividerIntervalTimerPref();
+    long bbmSpaceSlowBurstIntervalTimerPref();
+    int bbmSpaceBurstDividerIntervalTimerPref();
     long bbmSpaceEndTripIntervalTimerPref();
+	long bbmSpaceSMSIntervalTimerPref();
+	String bbmSpaceSMSPhoneNumber();
 }
